@@ -20,4 +20,10 @@ public class LoginUserImpl implements LoginService {
         Optional<User> user = userRepository.findByUsername(username);
         return user.map(value -> value.getPassword().equals(password)).orElse(false);
     }
+
+    @Override
+    public String registerUser(User user) {
+        User saveUser = userRepository.save(user);
+        return "El usuario con nombre " + saveUser.getName() + " ha sido registrado.";
+    }
 }

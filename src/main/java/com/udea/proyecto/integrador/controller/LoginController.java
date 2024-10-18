@@ -1,7 +1,9 @@
 package com.udea.proyecto.integrador.controller;
 
 import com.udea.proyecto.integrador.dto.LoginDTO;
+import com.udea.proyecto.integrador.entitiy.User;
 import com.udea.proyecto.integrador.service.LoginService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,7 +24,7 @@ public class LoginController {
     }
 
     @PostMapping("/register")
-    public void registerUser() {
-
+    public ResponseEntity<String> registerUser(@RequestBody User user) {
+        return ResponseEntity.ok(loginService.registerUser(user));
     }
 }
