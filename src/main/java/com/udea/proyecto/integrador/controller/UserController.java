@@ -1,5 +1,6 @@
 package com.udea.proyecto.integrador.controller;
 
+import com.udea.proyecto.integrador.dto.UserDTO;
 import com.udea.proyecto.integrador.entitiy.User;
 import com.udea.proyecto.integrador.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/{userId}")
-    ResponseEntity<User> getUser(@PathVariable Long userId){
+    ResponseEntity<UserDTO> getUser(@PathVariable Long userId){
         return ResponseEntity.ok(userService.getUser(userId));
     }
 
@@ -29,7 +30,7 @@ public class UserController {
     }
 
     @PostMapping
-    ResponseEntity<User> registerUser(@RequestBody User user){
+    ResponseEntity<UserDTO> registerUser(@RequestBody User user){
         return ResponseEntity.ok(userService.registerUser(user));
     }
 
@@ -37,5 +38,10 @@ public class UserController {
     ResponseEntity<String> registerWallet(@PathVariable Long userId, @PathVariable String walletAddress){
         userService.registerWallet(userId, walletAddress);
         return ResponseEntity.ok("wallet registrada...");
+    }
+
+    @GetMapping("/{userId}/address")
+    ResponseEntity<String> getUserAddress(@PathVariable Long userId){
+        return ResponseEntity.ok(userService.getUserAddress(userId));
     }
 }
