@@ -18,14 +18,24 @@ public class UserController {
         return ResponseEntity.ok(userService.getUser(userId));
     }
 
+    @GetMapping("/{userId}/wallet")
+    ResponseEntity<String> getUserWallet(@PathVariable Long userId) {
+        return ResponseEntity.ok(userService.getUsersWallet(userId));
+    }
+
+    @GetMapping("/{username}/user_id")
+    ResponseEntity<String> getUserIdFromUsername(@PathVariable String username) {
+        return ResponseEntity.ok(userService.getUserIdFromUsername(username));
+    }
+
     @PostMapping
     ResponseEntity<User> registerUser(@RequestBody User user){
         return ResponseEntity.ok(userService.registerUser(user));
     }
 
-    @PutMapping
-    ResponseEntity<String> registerWallet(@PathVariable Long userId, @PathVariable String walletId){
-        userService.registerWallet(userId, walletId);
+    @PutMapping("/{userId}/wallet/{walletAddress}")
+    ResponseEntity<String> registerWallet(@PathVariable Long userId, @PathVariable String walletAddress){
+        userService.registerWallet(userId, walletAddress);
         return ResponseEntity.ok("wallet registrada...");
     }
 }

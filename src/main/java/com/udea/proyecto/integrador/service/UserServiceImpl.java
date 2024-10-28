@@ -30,6 +30,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public String getUsersWallet(Long userId) {
+        Optional<User> user = userRepository.findById(userId);
+        return user.map(User::getWallet).orElse("");
+    }
+
+    @Override
+    public String getUserIdFromUsername(String username) {
+        Optional<User> user = userRepository.findByUsername(username);
+        return user.map(value -> value.getUserId().toString()).orElse("");
+    }
+
+    @Override
     public void registerWallet(Long userId, String walletId) {
         Optional<User> user = userRepository.findById(userId);
         if(user.isEmpty()) {
