@@ -19,11 +19,6 @@ public class UserController {
         return ResponseEntity.ok(userService.getUser(userId));
     }
 
-    @GetMapping("/{userId}/wallet")
-    ResponseEntity<String> getUserWallet(@PathVariable Long userId) {
-        return ResponseEntity.ok(userService.getUsersWallet(userId));
-    }
-
     @GetMapping("/{username}/user_id")
     ResponseEntity<String> getUserIdFromUsername(@PathVariable String username) {
         return ResponseEntity.ok(userService.getUserIdFromUsername(username));
@@ -41,7 +36,7 @@ public class UserController {
     }
 
     @GetMapping("/{userId}/wallet")
-    ResponseEntity<String> getUserAddress(@PathVariable Long userId){
-        return ResponseEntity.ok(userService.getUserAddress(userId));
+    ResponseEntity<String> getUserWallet(@PathVariable Long userId){
+        return ResponseEntity.ok(userService.getUserWallet(userId));
     }
 }
