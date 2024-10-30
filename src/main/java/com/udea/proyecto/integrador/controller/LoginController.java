@@ -19,7 +19,7 @@ public class LoginController {
         this.loginService = loginService;
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity<LoginResponseDTO> loginUser(@RequestBody LoginDTO loginDTO) throws Exception {
         return ResponseEntity.ok(loginService.loginUser(loginDTO.getUsername(), loginDTO.getPassword()));
     }
