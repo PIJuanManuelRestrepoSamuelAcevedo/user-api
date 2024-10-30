@@ -1,5 +1,6 @@
 package com.udea.proyecto.integrador.service;
 
+import com.udea.proyecto.integrador.dto.LoginResponseDTO;
 import com.udea.proyecto.integrador.entitiy.User;
 import com.udea.proyecto.integrador.repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -16,9 +17,16 @@ public class LoginUserImpl implements LoginService {
     }
 
     @Override
-    public boolean loginUser(String username, String password) {
+    public LoginResponseDTO loginUser(String username, String password) throws Exception {
         Optional<User> user = userRepository.findByUsername(username);
-        return user.map(value -> value.getPassword().equals(password)).orElse(false);
+        if(user.isPresent()) {
+            if (user.get().getPassword().equals(password)) {
+                return new LoginResponseDTO(user.get().getUsername());
+            }
+            throw new Exception("Bad password.");
+        } else {
+            throw new Exception("user not found.");
+        }
     }
 
     @Override

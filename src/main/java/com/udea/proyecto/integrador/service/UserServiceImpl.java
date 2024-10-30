@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService {
         if (user.isEmpty()){
             throw new RuntimeException();
         }
-        return user.get().getAddress();
+        return user.get().getWallet();
     }
 
     public UserDTO getUserDto(User user) {

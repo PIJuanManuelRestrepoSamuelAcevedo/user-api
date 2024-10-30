@@ -1,6 +1,7 @@
 package com.udea.proyecto.integrador.controller;
 
 import com.udea.proyecto.integrador.dto.LoginDTO;
+import com.udea.proyecto.integrador.dto.LoginResponseDTO;
 import com.udea.proyecto.integrador.entitiy.User;
 import com.udea.proyecto.integrador.service.LoginService;
 import org.springframework.http.ResponseEntity;
@@ -19,8 +20,8 @@ public class LoginController {
     }
 
     @GetMapping("/login")
-    public boolean loginUser(@RequestBody LoginDTO loginDTO) {
-        return loginService.loginUser(loginDTO.getUsername(), loginDTO.getPassword());
+    public ResponseEntity<LoginResponseDTO> loginUser(@RequestBody LoginDTO loginDTO) throws Exception {
+        return ResponseEntity.ok(loginService.loginUser(loginDTO.getUsername(), loginDTO.getPassword()));
     }
 
     @PostMapping("/register")

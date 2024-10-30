@@ -40,7 +40,7 @@ public class UserController {
         return ResponseEntity.ok("wallet registrada...");
     }
 
-    @GetMapping("/{userId}/address")
+    @GetMapping("/{userId}/wallet")
     ResponseEntity<String> getUserAddress(@PathVariable Long userId){
         return ResponseEntity.ok(userService.getUserAddress(userId));
     }
