@@ -1,5 +1,6 @@
 package com.udea.proyecto.integrador.service;
 
+import com.udea.proyecto.integrador.config.ApiException;
 import com.udea.proyecto.integrador.dto.UserDTO;
 import com.udea.proyecto.integrador.entitiy.User;
 import com.udea.proyecto.integrador.repository.UserRepository;
@@ -23,7 +24,7 @@ public class UserServiceImpl implements UserService {
     public UserDTO getUser(Long userId) {
         Optional<User> user = userRepository.findById(userId);
         if (user.isEmpty()){
-            throw new RuntimeException();
+            throw new ApiException("User not found.");
         }
         return getUserDto(user.get());
     }
@@ -36,14 +37,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public String getUserIdFromUsername(String username) {
         Optional<User> user = userRepository.findByUsername(username);
-        return user.map(value -> value.getUserId().toString()).orElse("");
+        return user.map(value -> value.getUserId().toString()).orElseThrow(() -> new ApiException("User not found."));
     }
 
     @Override
     public void registerWallet(Long userId, String walletId) {
         Optional<User> user = userRepository.findById(userId);
         if(user.isEmpty()) {
-            throw new RuntimeException();
+            throw new ApiException("User not found.");
         }
         User userAux = user.get();
         userAux.setWallet(walletId);
@@ -54,7 +55,7 @@ public class UserServiceImpl implements UserService {
     public String getUserWallet(Long userId) {
         Optional<User> user = userRepository.findById(userId);
         if (user.isEmpty()){
-            throw new RuntimeException();
+            throw new ApiException("User not found.");
         }
         return user.get().getWallet();
     }

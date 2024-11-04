@@ -4,8 +4,8 @@ import com.udea.proyecto.integrador.dto.LoginDTO;
 import com.udea.proyecto.integrador.dto.LoginResponseDTO;
 import com.udea.proyecto.integrador.entitiy.User;
 import com.udea.proyecto.integrador.service.LoginService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +20,7 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<LoginResponseDTO> loginUser(@RequestBody LoginDTO loginDTO) throws Exception {
+    public ResponseEntity<LoginResponseDTO> loginUser(@Valid @RequestBody LoginDTO loginDTO) throws Exception {
         return ResponseEntity.ok(loginService.loginUser(loginDTO.getUsername(), loginDTO.getPassword()));
     }
 
