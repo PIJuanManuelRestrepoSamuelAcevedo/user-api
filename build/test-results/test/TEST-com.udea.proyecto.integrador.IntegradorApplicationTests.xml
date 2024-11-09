@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.udea.proyecto.integrador.IntegradorApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-09T20:45:42" hostname="DESKTOP-Q1RUT5C" time="0.371">
+<testsuite name="com.udea.proyecto.integrador.IntegradorApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-09T20:55:01" hostname="DESKTOP-Q1RUT5C" time="0.463">
   <properties/>
-  <testcase name="contextLoads()" classname="com.udea.proyecto.integrador.IntegradorApplicationTests" time="0.371"/>
-  <system-out><![CDATA[15:45:38.396 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.udea.proyecto.integrador.IntegradorApplicationTests]: IntegradorApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-15:45:38.489 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.udea.proyecto.integrador.IntegradorApplication for test class com.udea.proyecto.integrador.IntegradorApplicationTests
+  <testcase name="contextLoads()" classname="com.udea.proyecto.integrador.IntegradorApplicationTests" time="0.463"/>
+  <system-out><![CDATA[15:54:57.247 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.udea.proyecto.integrador.IntegradorApplicationTests]: IntegradorApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:54:57.350 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.udea.proyecto.integrador.IntegradorApplication for test class com.udea.proyecto.integrador.IntegradorApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,19 +14,19 @@
 
  :: Spring Boot ::                (v3.3.3)
 
-2024-11-09T15:45:38.816-05:00  INFO 15816 --- [integrador] [    Test worker] c.u.p.i.IntegradorApplicationTests       : Starting IntegradorApplicationTests using Java 17.0.11 with PID 15816 (started by Manuel in C:\Users\Manuel\OneDrive\Desktop\user api)
-2024-11-09T15:45:38.818-05:00  INFO 15816 --- [integrador] [    Test worker] c.u.p.i.IntegradorApplicationTests       : No active profile set, falling back to 1 default profile: "default"
-2024-11-09T15:45:39.467-05:00  INFO 15816 --- [integrador] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-09T15:45:39.516-05:00  INFO 15816 --- [integrador] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 1 JPA repository interface.
-2024-11-09T15:45:39.882-05:00  INFO 15816 --- [integrador] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-09T15:45:40.028-05:00  INFO 15816 --- [integrador] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-11-09T15:45:40.030-05:00  INFO 15816 --- [integrador] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-09T15:45:40.117-05:00  INFO 15816 --- [integrador] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-09T15:45:40.174-05:00  INFO 15816 --- [integrador] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-11-09T15:45:40.206-05:00  INFO 15816 --- [integrador] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-09T15:45:40.470-05:00  INFO 15816 --- [integrador] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-09T15:45:40.508-05:00  WARN 15816 --- [integrador] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-11-09T15:45:41.113-05:00  INFO 15816 --- [integrador] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-09T15:54:57.766-05:00  INFO 6600 --- [integrador] [    Test worker] c.u.p.i.IntegradorApplicationTests       : Starting IntegradorApplicationTests using Java 17.0.11 with PID 6600 (started by Manuel in C:\Users\Manuel\OneDrive\Desktop\user api)
+2024-11-09T15:54:57.767-05:00  INFO 6600 --- [integrador] [    Test worker] c.u.p.i.IntegradorApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2024-11-09T15:54:58.478-05:00  INFO 6600 --- [integrador] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-09T15:54:58.534-05:00  INFO 6600 --- [integrador] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
+2024-11-09T15:54:58.859-05:00  INFO 6600 --- [integrador] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-09T15:54:59.028-05:00  INFO 6600 --- [integrador] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-11-09T15:54:59.029-05:00  INFO 6600 --- [integrador] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-09T15:54:59.122-05:00  INFO 6600 --- [integrador] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-09T15:54:59.181-05:00  INFO 6600 --- [integrador] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-09T15:54:59.216-05:00  INFO 6600 --- [integrador] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-09T15:54:59.497-05:00  INFO 6600 --- [integrador] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-09T15:54:59.542-05:00  WARN 6600 --- [integrador] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-09T15:55:00.172-05:00  INFO 6600 --- [integrador] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: 
     alter table if exists users 
        alter column name set data type varchar(255)
@@ -39,16 +39,9 @@ Hibernate:
 Hibernate: 
     alter table if exists users 
        alter column wallet set data type varchar(255)
-2024-11-09T15:45:41.150-05:00  INFO 15816 --- [integrador] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-09T15:45:41.591-05:00  WARN 15816 --- [integrador] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-11-09T15:45:42.518-05:00  WARN 15816 --- [integrador] [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: c5dab27b-e81a-4b8b-8bef-6892628fe4d9
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2024-11-09T15:45:42.539-05:00  INFO 15816 --- [integrador] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2024-11-09T15:45:42.685-05:00  INFO 15816 --- [integrador] [    Test worker] c.u.p.i.IntegradorApplicationTests       : Started IntegradorApplicationTests in 4.072 seconds (process running for 5.045)
+2024-11-09T15:55:00.209-05:00  INFO 6600 --- [integrador] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-09T15:55:00.676-05:00  WARN 6600 --- [integrador] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-09T15:55:01.721-05:00  INFO 6600 --- [integrador] [    Test worker] c.u.p.i.IntegradorApplicationTests       : Started IntegradorApplicationTests in 4.167 seconds (process running for 5.246)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
